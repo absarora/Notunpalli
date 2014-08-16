@@ -1,3 +1,25 @@
 // Place all the styles related to the welcomes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1 {
+  color: red;
+}
+
+.page-header{
+  margin: 2% 6% 0.9% 6%;
+}
+
+.nav{
+  margin: 0 6% 0.9% 6%;
+}
+.media-object{
+  width: 80px;
+  height: 80px;
+}
+.media-heading{
+  margin-top: 3.8%;
+}
+.carousel{
+  margin: 0 6%;
+}
