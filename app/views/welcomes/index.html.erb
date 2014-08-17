@@ -1,4 +1,5 @@
-<div class='container'>
+<!-- <div class='container'> -->
+  <%= render 'partials/flash_messages' %>
   <div class='page-header'>
     <div class='media'>
     <a class="pull-left" href="#">
@@ -13,15 +14,7 @@
 
 <!-- ========== NAVBAR ============== -->
 
-  <ul class='nav nav-pills'>
-    <li><%= link_to 'HOME', welcomes_index_path %></li>
-    <li><%= link_to 'ABOUT', welcomes_about_path %></li>
-    <li><%= link_to 'EVENTS', contents_event_path %></li>
-    <li><%= link_to 'COMMITTEE', contents_committee_path %></li>
-    <li><%= link_to 'DONATE', contents_donate_path%></li>
-    <li><%= link_to 'ADVERTISEMENTS & PROMOTIONS', contents_promote_path %></li>
-    <li><%= link_to 'CONTACT US', contents_contact_path %></li>
-  </ul>
+  <%= render "partials/navbar" %>
 
 <!-- ================================ -->
 
@@ -60,4 +53,4 @@
       <span class="glyphicon glyphicon-chevron-right"></span>
     </a>
   </div>
-</div>
+<!-- </div> -->

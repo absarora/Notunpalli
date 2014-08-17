@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
   devise_for :users
+  
   # welcomes controller
   # -------------------
   get 'welcomes/index'
@@ -13,10 +14,6 @@ Rails.application.routes.draw do
   get 'contents/donate'
   get 'contents/event'
   get 'contents/promote'
-
-  # users controller
-  # ----------------
-
 
   root to: 'welcomes#index'
 
