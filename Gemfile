@@ -33,6 +33,8 @@ gem 'thin'
 gem 'bootstrap-sass'
 gem 'rspec-rails'
 
+gem 'devise'
+
 group :test do
   gem 'capybara'
   gem 'faker'
