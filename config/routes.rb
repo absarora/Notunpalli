@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  # Devise
+  # ------
   devise_for :users
   
   # welcomes controller
@@ -10,10 +12,15 @@ Rails.application.routes.draw do
   # contents controller
   # -------------------
   get 'contents/committee'
-  get 'contents/contact'
+  # get 'contents/contact'
   get 'contents/donate'
   get 'contents/event'
   get 'contents/promote'
+
+  # contacts controller
+  # -------------------
+  match 'contents/contact',     to: 'contacts#new', via: 'get'
+  resources "contacts", only: [:new, :create]
 
   root to: 'welcomes#index'
 

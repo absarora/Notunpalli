@@ -35,6 +35,9 @@ gem 'rspec-rails'
 
 gem 'devise'
 
+gem 'mail_form'
+gem 'simple_form'
+
 group :test do
   gem 'capybara'
   gem 'faker'
