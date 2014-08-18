@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   # welcomes controller
   # -------------------
   get 'welcomes/index'
-  get 'welcomes/about'
+  # get 'welcomes/about'
 
   # contents controller
   # -------------------
@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get 'contents/donate'
   get 'contents/event'
   get 'contents/promote'
+  get 'contents/gallery'
 
   # contacts controller
   # -------------------
