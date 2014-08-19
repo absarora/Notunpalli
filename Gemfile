@@ -35,14 +35,23 @@ gem 'rspec-rails'
 
 gem 'devise'
 
-gem 'mail_form'
+gem 'mail_form' #setup contact us page
 gem 'simple_form'
+
+gem 'dragonfly'
+gem 'remotipart', '~> 1.2'
+gem 'jquery-fileupload-rails', github: 'Springest/jquery-fileupload-rails'
+
+group :production do
+  gem 'rack-cache', :require => 'rack/cache'
+end
 
 group :test do
   gem 'capybara'
   gem 'faker'
   gem 'launchy'
 end
+gem 'dragonfly-s3_data_store'
 # Use unicorn as the app server
 # gem 'unicorn'
 

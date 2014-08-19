@@ -1,0 +1,10 @@
+---
+name: sampl-image.jpg
+model_class: Photo
+model_attachment: image
+analyser_cache:
+  image_properties:
+    format: jpeg
+    width: 640
+    height: 960
+  format: jpeg

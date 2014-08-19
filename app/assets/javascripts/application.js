@@ -15,6 +15,8 @@
 //= require turbolinks
 //= require bootstrap
 //= require bootstrap-sprockets
+//= require jquery.remotipart
+//= require jquery-fileupload/basic
 //= require_tree .
 
 $(document).ready(function(){

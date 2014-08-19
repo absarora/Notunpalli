@@ -23,6 +23,11 @@ Rails.application.routes.draw do
   match 'contents/contact',     to: 'contacts#new', via: 'get'
   resources "contacts", only: [:new, :create]
 
+  # photos controller
+  # -----------------
+  resources :photos, only: [:new, :create]
+  get '/photos/new_multiple', to: 'photos#new_multiple', as: :new_photo_multiple
+
   root to: 'welcomes#index'
 
 end
