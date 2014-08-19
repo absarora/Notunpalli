@@ -11,16 +11,16 @@
 </head>
 <body>
   <div class='container'>
-    <!-- <div class="pull-right user-info">
-     <%# if current_user %>
-       Hi <%#= current_user.first_name.capitalize %>! <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-     <%# else %>
-       <%#= link_to "Sign In", new_user_session_path %> or 
-       <%#= link_to "Sign Up", new_user_registration_path %>
-     <%# end %>
+    <div class="pull-right user-info">
+     <% if current_user %>
+       Hi <%= current_user.first_name.capitalize %>! <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+     <% else %>
+       <%= link_to "Sign In", new_user_session_path %> or 
+       <%= link_to "Sign Up", new_user_registration_path %>
+     <% end %>
     </div>
 
-    <%#= render 'partials/flash_messages' %>
+    <%= render 'partials/flash_messages' %>
     
     <div class='page-header'>
       <div class='media'>
@@ -33,24 +33,7 @@
       </div>
     </div>
 
-    <%#= render "partials/navbar" %> -->
-<!-- ============== DRAGONFLY ============================= -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Uploader</a>
-    </div>
-    <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li><%= link_to 'Upload one', root_path %></li>
-      </ul>
-    </div>
-<!-- ====================================================== -->
-
+    <%= render "partials/navbar" %>
 
 <%= yield %>
   </div>

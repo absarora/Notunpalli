@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   get 'contents/donate'
   get 'contents/event'
   get 'contents/promote'
-  get 'contents/gallery'
+  # get 'contents/gallery'
 
   # contacts controller
   # -------------------
@@ -26,7 +26,7 @@ Rails.application.routes.draw do
   # photos controller
   # -----------------
   resources :photos, only: [:new, :create]
-  get '/photos/new_multiple', to: 'photos#new_multiple', as: :new_photo_multiple
+  match 'contents/gallery', to: 'photos#new_multiple', via: 'get'
 
   root to: 'welcomes#index'
 
