@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   # Devise
   # ------
   devise_for :users
+  as :user do
+    get 'users/edit' => 'devise/registrations#edit', :as => 'edit_user_registration'
+    put 'users' => 'devise/registrations#update', :as => 'user_registration'
+  end
   
   # welcomes controller
   # -------------------
@@ -27,6 +31,10 @@ Rails.application.routes.draw do
   # -----------------
   resources :photos, only: [:new, :create]
   match 'contents/gallery', to: 'photos#new_multiple', via: 'get'
+
+  # Error Handling: Routing Error
+  # -----------------------------
+  match "*path", :to => "application#routing_error", :via => :all
 
   root to: 'welcomes#index'
 
