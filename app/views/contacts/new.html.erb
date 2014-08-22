@@ -4,9 +4,7 @@
   
   <div class='column col-sm-3'>
     <div class="form-group">
-      <div class="controls">
         <%= f.text_field :name, :required => true, autofocus: true, class: 'form-control', placeholder: 'Name' %>
-      </div>
     </div>
   </div>
 
@@ -14,9 +12,7 @@
 
   <div class='column col-sm-3'>
     <div class="form-group">
-      <div class="controls">
         <%= f.email_field :email, :required => true, autofocus: true, class: 'form-control', placeholder: 'Email' %>
-      </div>
     </div>
   </div>
 
@@ -24,9 +20,7 @@
 
   <div class='column col-sm-3'>
     <div class="form-group">
-      <div class="controls">
         <%= f.text_area :message, :required => true, class: 'col-xs-12', rows: '5', class: 'form-control', placeholder: 'Message' %>
-      </div>
     </div>
   </div>
   
@@ -35,9 +29,8 @@
     
   <div class='column col-sm-3'>
     <div class="form-group">
-      <div class="controls">
         <%= f.button :submit, 'Send message', :class=> "btn btn-primary" %>
-      </div>
     </div>
   </div>
+  </br></br></br></br>
 <% end %>

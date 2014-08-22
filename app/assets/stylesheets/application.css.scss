@@ -1,3 +1,8 @@
+/*
+*= require colorbox-rails
+*= require_self
+*= require_tree .
+*/
 @import "bootstrap-sprockets";
 @import 'bootstrap';
 @import 'welcomes.css.scss';
@@ -24,20 +29,37 @@
   li {
     list-style-type: none;
     padding: 0;
-    margin: 0;
-    min-height: 172px;
-    max-height: 272px;
+    margin-right: 2.5%;
     margin-bottom: 10px;
-    text-align: center;
+    
     img {
       margin-bottom: 10px;
+      width: 6.25em;
+      height: 6.25em;
     }
+  }
+}
+#gallery{
+  padding: 0;
+  margin: 0;
+  margin-top: 30px;
+  clear: both;
+  li {
+    list-style-type: none;
+    padding: 0;
+    margin-right: 2.5%;
+    
     p {
       margin: 0;
       height: 40px;
       overflow: hidden;
+      text-align: center;
     }
   }
+}
+.align-width{
+  text-align: center;
+  width: 50%;
 }
 
 .progress-wrapper {
@@ -46,4 +68,16 @@
 
 .btn-mini{
   padding: 0 4px;
+}
+
+.controls{          
+  width: 50px;
+  display: block;
+  font-size: 11px;
+  padding-top: 8px;
+  font-weight: bold;          
+}
+.next {
+    float: right;
+    text-align: right;
 }

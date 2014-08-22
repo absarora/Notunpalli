@@ -16,5 +16,6 @@
 //= require bootstrap
 //= require bootstrap-sprockets
 //= require jquery.remotipart
+//= require colorbox-rails
 //= require jquery-fileupload/basic
 //= require_tree .

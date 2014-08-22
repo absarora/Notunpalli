@@ -1,18 +1,22 @@
 <h1>2013</h1>
- 
-<ul class='row' id="photos-list">
-  <li class="column col-xs-6">
-  <%#= link_to image_tag(photo.image.thumb('100x100#').url, class: 'img-thumbnail'),
-              photo.image.remote_url, target: '_blank' %>
-    <% Photo.all.each do |photo| %>
-      <% if photo.title == '2013' %> 
+<div class='container'>
+  <div class='align-width'>
+    <ul class="row" id="photos-list">
+    
+      <% Photo.all.each do |photo| %>
+        <% if photo.title == '2013' %> 
+          
+          <% if current_user %>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4"><%= link_to photo, method: :delete, remote: true, id: "photo-#{photo.id}", data: {confirm: 'Are you sure?'} do %>
+            <%= image_tag photo.image.url, class: 'img-responsive', class: 'img-thumbnail' %>
+              <i class="glyphicon glyphicon-remove"> </i></li>
+            <% end %> 
+          <% else %>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4"><%= image_tag photo.image.url, class: 'img-responsive', class: 'img-thumbnail' %></li>
+          <% end %>
         
-        <%= link_to photo, method: :delete, remote: true, id: "photo-#{photo.id}", data: {confirm: 'Are you sure?'} do %>
-        <%= image_tag photo.image.thumb('100x100#').url, class: 'img-thumbnail' %>
-          <i class="glyphicon glyphicon-remove"> </i>
         <% end %>
-      
       <% end %>
-    <% end %>
-  </li>
-</ul>
+    </ul>
+  </div>
+</div>

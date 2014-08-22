@@ -34,7 +34,7 @@ gem 'bootstrap-sass'
 gem 'rspec-rails'
 
 gem 'devise'
-
+gem 'colorbox-rails'
 gem 'mail_form' #setup contact us page
 gem 'simple_form'
 

@@ -5,36 +5,29 @@
   
   <div class='column col-sm-3'>
     <div class="form-group">
-      <div class="controls">
-        <%= f.email_field :email, class: 'form-control', placeholder: 'Email' %>
-      </div>
+      <%= f.email_field :email, class: 'form-control', placeholder: 'Email' %>
     </div>
   </div>
   </br></br>
 
   <div class='column col-sm-3'>
     <div class="form-group">
-      <div class="controls">
-        <%= f.password_field :password, class: 'form-control', placeholder: 'Password' %>
-      </div>
+      <%= f.password_field :password, class: 'form-control', placeholder: 'Password' %>
     </div>
   </div>
   </br></br>
 
   <div class='column col-sm-3'>
     <div class="form-group">
-      <div class="controls">
-        <%= f.submit "Sign in", class: 'btn btn-primary btn-default' %>
-      </div>
+      <%= f.submit "Sign in", class: 'btn btn-primary btn-default' %>
     </div>
   </div>
   </br></br>
 
   <div class='column col-sm-3'>
     <div class="form-group">
-      <div class="controls">
         <%= render "devise/shared/links" %>
-      </div>
     </div>
   </div>
+  </br></br>
 <% end %>

@@ -1,48 +1,52 @@
 <h1>My Gallery</h1>
- 
-<ul class="row" id="photos-list">
+<div class='container'>
+<ul class="row" id='gallery'>
   <%#= render @photos %>
-  <li class="col-xs-3">
+  <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
     <%= link_to photos_year_2013_path do %>
       <%= image_tag("durgotsav-thumb.jpg", size: '180x180', class: 'img-thumbnail') %>
       <p>2013</p>
     <% end %>
   </li>
-  <li class="col-xs-3">
+  <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
     <%= link_to photos_year_2014_path do %>
       <%= image_tag("durgotsav-thumb.jpg", size: '180x180', class: 'img-thumbnail') %>
       <p>2014</p>
     <% end %>
   </li>
 </ul>
- 
-<h3>Upload multiple photos</h3>
-<%= form_for @photo do |f| %>
-
-  <div class='column col-sm-3'>
-    <div class="form-group">  
-      <%= f.label :album_name %>
-      <%= f.text_field :title, required: true %>
-    </div>
-  </div>
-  </br></br></br>
-
-  <div class='column col-sm-3'>
-    <div class="form-group">
-      <%= f.label :image %>
-      <%= f.file_field :image, required: true, multiple: true, name: 'photo[image]' %>
-    </div>
-  </div>
-  </br></br></br></br>
-
-  <!-- <div class="progress-wrapper">
-    <p>Bitrate: <span class="bitrate"></span></p>
-    <div class="progress">
-      <div class="progress-bar" role="progressbar">
-        0%
+</div>
+<% if current_user %>
+  <div class='container'>
+    <h3>Upload multiple photos</h3>
+    
+    <%= form_for @photo do |f| %>
+      <div class='column col-sm-3'>
+        <div class="form-group">  
+          <%= f.label :album_name %>
+          <%= f.text_field :title, required: true %>
+        </div>
       </div>
-    </div>
-  </div> -->
+      </br></br></br>
+
+      <div class='column col-sm-3'>
+        <div class="form-group">
+          <%= f.label :image %>
+          <%= f.file_field :image, required: true, multiple: true, name: 'photo[image]' %>
+        </div>
+      </div>
+      </br></br></br></br>
+
+      <!-- <div class="progress-wrapper">
+        <p>Bitrate: <span class="bitrate"></span></p>
+        <div class="progress">
+          <div class="progress-bar" role="progressbar">
+            0%
+          </div>
+        </div>
+      </div> -->
+    <% end %>
+  </div>
 <% end %>
 
 <script>

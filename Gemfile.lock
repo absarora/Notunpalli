@@ -54,6 +54,9 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.1)
+    colorbox-rails (0.1.2)
+      jquery-rails
+      rails (>= 3.1.1)
     daemons (1.1.9)
     devise (3.3.0)
       bcrypt (~> 3.0)
@@ -225,6 +228,7 @@ DEPENDENCIES
   bootstrap-sass
   capybara
   coffee-rails (~> 4.0.0)
+  colorbox-rails
   devise
   dragonfly
   dragonfly-s3_data_store
