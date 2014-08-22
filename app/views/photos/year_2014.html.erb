@@ -13,8 +13,8 @@
             <% end %> 
           <% else %>
 
-            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4"><%= link_to photo.image.remote_url, remote: true, rel: 'gallery', :data => { :colorbox_static => true} do %><%#= link_to image_tag(photo.image.url, class: 'img-thumbnail'), photo.image.remote_url, target: '_blank' %> <%= image_tag photo.image.url, class: 'img-responsive', class: 'img-thumbnail' %></li>
-            <% end %>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4"><%#= link_to photo.image.remote_url, remote: true, rel: 'gallery', :data => { :colorbox_static => true} do %><%= link_to image_tag(photo.image.url, class: 'img-thumbnail'), photo.image.remote_url, target: '_blank' %> <%#= image_tag photo.image.url, class: 'img-responsive', class: 'img-thumbnail' %></li>
+            <%# end %>
           <% end %>
         
         <% end %>
