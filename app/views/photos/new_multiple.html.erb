@@ -1,23 +1,82 @@
 <h1>My Gallery</h1>
  
 <ul class="row" id="photos-list">
-  <%= render @photos %>
+  <%#= render @photos %>
+  <li class="col-xs-3">
+    <%= link_to photos_year_2013_path do %>
+      <%= image_tag("durgotsav-thumb.jpg", size: '180x180', class: 'img-thumbnail') %>
+      <p>2013</p>
+    <% end %>
+  </li>
+  <li class="col-xs-3">
+    <%= link_to photos_year_2014_path do %>
+      <%= image_tag("durgotsav-thumb.jpg", size: '180x180', class: 'img-thumbnail') %>
+      <p>2014</p>
+    <% end %>
+  </li>
 </ul>
  
 <h3>Upload multiple photos</h3>
 <%= form_for @photo do |f| %>
- 
-  <div class="form-group">
-    <%= f.label :image %>
-    <%= f.file_field :image, required: true, multiple: true, name: 'photo[image]' %>
-  </div>
 
-  <div class="progress-wrapper">
+  <div class='column col-sm-3'>
+    <div class="form-group">  
+      <%= f.label :album_name %>
+      <%= f.text_field :title, required: true %>
+    </div>
+  </div>
+  </br></br></br>
+
+  <div class='column col-sm-3'>
+    <div class="form-group">
+      <%= f.label :image %>
+      <%= f.file_field :image, required: true, multiple: true, name: 'photo[image]' %>
+    </div>
+  </div>
+  </br></br></br></br>
+
+  <!-- <div class="progress-wrapper">
     <p>Bitrate: <span class="bitrate"></span></p>
     <div class="progress">
       <div class="progress-bar" role="progressbar">
         0%
       </div>
     </div>
-  </div>
+  </div> -->
 <% end %>
+
+<script>
+$(document).ready(function() {
+  var bitrate, multiple_photos_form, progress_bar, wrapper;
+  multiple_photos_form = $("#new_photo");
+  // wrapper = multiple_photos_form.find(".progress-wrapper");
+  // bitrate = wrapper.find(".bitrate");
+  // progress_bar = wrapper.find(".progress-bar");
+  multiple_photos_form.fileupload({
+    dataType: "script",
+    add: function(e, data) {
+      var file, types;
+      types = /(\.|\/)(gif|jpe?g|png|bmp)$/i;
+      file = data.files[0];
+      if (types.test(file.type) || types.test(file.name)) {
+        return data.submit();
+      } else {
+        return alert(file.name + " must be GIF, JPEG, BMP or PNG file");
+      }
+    }
+  });
+  // multiple_photos_form.on("fileuploadstart", function() {
+  //   return wrapper.show();
+  // });
+  // multiple_photos_form.on("fileuploaddone", function() {
+  //   wrapper.hide();
+  //   return progress_bar.width(0);
+  // });
+  // return multiple_photos_form.on("fileuploadprogressall", function(e, data) {
+  //   var progress;
+  //   bitrate.text((data.bitrate / 1024).toFixed(2) + "Kb/s");
+  //   progress = parseInt(data.loaded / data.total * 100, 10);
+  //   return progress_bar.css("width", progress + "%").text(progress + "%");
+  // });
+});
+</script>

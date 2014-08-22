@@ -1,4 +1,8 @@
 <li class="col-xs-3">
-  <%= link_to image_tag(photo.image.thumb('180x180#').url, class: 'img-thumbnail'),
+  <%#= link_to image_tag(photo.image.thumb('100x100#').url, class: 'img-thumbnail'),
               photo.image.remote_url, target: '_blank' %>
+  <%= image_tag photo.image.thumb('100x100#').url, class: 'img-thumbnail' %>
+  <article>
+    <%= photo.title %>
+  </article>
 </li>

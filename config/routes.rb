@@ -29,12 +29,10 @@ Rails.application.routes.draw do
 
   # photos controller
   # -----------------
-  resources :photos, only: [:new, :create]
+  resources :photos, only: [:create, :destroy]
   match 'contents/gallery', to: 'photos#new_multiple', via: 'get'
-
-  # Error Handling: Routing Error
-  # -----------------------------
-  match "*path", :to => "application#routing_error", :via => :all
+  get 'photos/year_2013'
+  get 'photos/year_2014'
 
   root to: 'welcomes#index'
 

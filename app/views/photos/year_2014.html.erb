@@ -1,0 +1,18 @@
+<h1>2014</h1>
+ 
+<ul class="row" id="photos-list">
+  <li class="col-xs-6">
+  <%#= link_to image_tag(photo.image.thumb('100x100#').url, class: 'img-thumbnail'),
+              photo.image.remote_url, target: '_blank' %>
+    <% Photo.all.each do |photo| %>
+      <% if photo.title == '2014' %> 
+        
+        <%= link_to photo, method: :delete, remote: true, id: "photo-#{photo.id}", data: {confirm: 'Are you sure?'} do %>
+        <%= image_tag photo.image.thumb('100x100#').url, class: 'img-thumbnail' %>
+          <i class="glyphicon glyphicon-remove"> </i>
+        <% end %> 
+      
+      <% end %>
+    <% end %>
+  </li>
+</ul>
