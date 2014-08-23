@@ -53,6 +53,7 @@ group :test do
   gem 'launchy'
 end
 gem 'dragonfly-s3_data_store'
+gem 'newrelic_rpm'
 # Use unicorn as the app server
 # gem 'unicorn'
 
