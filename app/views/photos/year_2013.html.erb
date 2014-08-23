@@ -11,8 +11,11 @@
             <%= image_tag photo.image.url, class: 'img-responsive', class: 'img-thumbnail' %>
               <i class="glyphicon glyphicon-remove"> </i></li>
             <% end %> 
+          
           <% else %>
-            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4"><%= image_tag photo.image.url, class: 'img-responsive', class: 'img-thumbnail' %></li>
+            
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4"><%= link_to image_tag(photo.image.url, class: 'img-thumbnail'), photo.image.remote_url, rel: 'gallery', :data => { :colorbox_static => true}, target: '_blank' %></li>
+            
           <% end %>
         
         <% end %>
