@@ -11,11 +11,12 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
-//= require turbolinks
+//= require jquery.remotipart
+//= require jquery-fileupload/basic
 //= require bootstrap
 //= require bootstrap-sprockets
-//= require jquery.remotipart
 //= require colorbox-rails
-//= require jquery-fileupload/basic
+//= require turbolinks
 //= require_tree .

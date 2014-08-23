@@ -1,3 +1,10 @@
+<%# javascript 'bootstrap' %>
+<%# javascript 'colorbox-rails' %>
+<script>
+  $(function(){
+
+  });
+</script>
 <h1>2014</h1>
 <div class='container'>
   <div class='align-width'>
@@ -14,7 +21,7 @@
           
           <% else %>
           
-            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4"><%= link_to image_tag(photo.image.url, class: 'img-thumbnail'), photo.image.remote_url, rel: 'gallery', :data => { :colorbox_static => true, colorbox_photo: true}, target: '_blank' %></li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4"><%= link_to(image_tag(photo.image.url, class: 'img-thumbnail'), photo.image.remote_url, rel: 'gallery', :data => { :colorbox_static => true, colorbox_photo: true}, target: '_blank') %></li>
 
           <% end %>
         

@@ -3,13 +3,13 @@
 <ul class="row" id='gallery'>
   <%#= render @photos %>
   <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
-    <%= link_to photos_year_2013_path do %>
+    <%= link_to photos_year_2013_path, data: { no_turbolink: true } do %>
       <%= image_tag("durgotsav-thumb.jpg", size: '180x180', class: 'img-thumbnail') %>
       <p>2013</p>
     <% end %>
   </li>
   <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
-    <%= link_to photos_year_2014_path do %>
+    <%= link_to photos_year_2014_path, data: { no_turbolink: true } do %>
       <%= image_tag("durgotsav-thumb.jpg", size: '180x180', class: 'img-thumbnail') %>
       <p>2014</p>
     <% end %>
