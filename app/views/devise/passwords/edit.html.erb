@@ -6,18 +6,14 @@
 
   <div class='column col-sm-3'>
     <div class="form-group">
-      <div class="controls">
         <%= f.password_field :password, class: 'form-control', placeholder: 'New password', autofocus: true %>
-      </div>
     </div>
   </div>
   </br></br>
   
   <div class='column col-sm-3'>
     <div class="form-group">
-      <div class="controls">
         <%= f.password_field :password_confirmation, class: 'form-control', placeholder: 'Password Confirmation', autocomplete: "off" %>
-      </div>
     </div>
   </div>
   
@@ -25,9 +21,7 @@
 
   <div class='column col-sm-3'>
     <div class="form-group">
-      <div class="controls">
         <%= f.submit "Change my password", class: 'btn btn-primary btn-default' %>
-      </div>
     </div>
   </div>
   
@@ -35,9 +29,8 @@
 
   <div class='column col-sm-3'>
     <div class="form-group">
-      <div class="controls">
         <%= render "devise/shared/links" %>
-      </div>
     </div>
   </div>
+  </br></br>
 <% end %>

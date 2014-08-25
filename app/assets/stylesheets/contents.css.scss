@@ -1,0 +1,132 @@
+.event-page{
+  margin: 0 7.2% 3% 4.6%;
+
+  background: #7f7f7f;
+  background: rgba(255,255,255,0.3);
+  border-radius: 5px;
+  padding: 10px;
+  h1{
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+}
+
+div.col-md-5 {
+  width: 40%;
+  background: #FFFFFF;
+  background: rgba(233,233,233,0.1);
+  padding: 0 0px 0 8px;
+  border-radius: 5px;
+  margin-left: 10px;
+  h3{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  p#event{
+    font-family: Helvetica Neue, Helvetica, Arial;
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+  p{
+    font-family: Helvetica Neue, Helvetica, Arial;
+    font-size: 12px;
+  }
+  td.dtime{
+    text-align: right;
+  }
+  p.table-footer{
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+}
+div.col-sm-6 {
+  p#italic {
+    font-style: italic;
+    font-size: 14px;
+    margin-bottom: 0;
+    padding: 3px 8px 0 0;
+    text-align: right;
+  }
+  #height-adj{
+    padding-right: 0;
+  }
+}
+div.col-md-7 {
+  width: 57.0%;
+  background: #FFFFFF;
+  background: rgba(233,233,233,0.1);
+  padding: 0 0px 0 10px;
+  border-radius: 5px;
+  margin-left: 10px;
+  h3{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  p#event{
+    font-family: Helvetica Neue, Helvetica, Arial;
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+  p{
+    font-family: Helvetica Neue, Helvetica, Arial;
+    font-size: 12px;
+  }
+  p.table-footer{
+    font-size: 14px;
+    text-align: center;
+  }
+  td.realign-image{
+    text-align: right;
+  }
+  td.middle-align{
+    text-align: center;
+    padding-right: 11px;
+    padding-left: 5px;
+  }
+  td.custom-align{
+    padding-left: 16px;
+    padding-right: 0;
+  }
+}
+.col-md-4{
+  text-align: center;
+  padding-top: 15px;
+}
+#committee-align{
+  text-align: center;
+}
+
+div.committee-page{
+  margin: 0 7.2% 3% 4.6%;
+
+  background: #7f7f7f;
+  background: rgba(255,255,255,0.3);
+  border-radius: 5px;
+  padding: 10px;
+  h1{
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  #margin-realign{
+    margin-top: 10px;
+  }
+  .table-foot{
+    margin-bottom: 0;
+  }
+  .col-md-12{
+    text-align: center;
+  }
+}
+.col-lg-12{
+  width: 98%;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 0 12px;
+  background: #FFFFFF;
+  background: rgba(233,233,233,0.1);
+  font-family: 'Josefin Slab', serif;
+  font-size: 16px;
+  font-weight: 600;
+}

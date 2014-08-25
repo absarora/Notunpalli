@@ -1,36 +1,39 @@
-<h1>Contact Us</h1>
+<div class='container'>
+  <div class='contents'>
+    <h1>CONTACT</h1>
+    <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
 
-<%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
-  
-  <div class='column col-sm-3'>
-    <div class="form-group">
-        <%= f.text_field :name, :required => true, autofocus: true, class: 'form-control', placeholder: 'Name' %>
-    </div>
+      <div class='column col-sm-3'>
+        <div class="form-group">
+          <%= f.text_field :name, :required => true, autofocus: true, class: 'form-control', placeholder: 'Name' %>
+        </div>
+      </div>
+
+      </br></br>
+
+      <div class='column col-sm-3'>
+        <div class="form-group">
+          <%= f.email_field :email, :required => true, class: 'form-control', placeholder: 'Email' %>
+        </div>
+      </div>
+
+      </br></br>
+
+      <div class='column col-sm-3'>
+        <div class="form-group">
+          <%= f.text_area :message, :required => true, class: 'col-xs-12', rows: '5', class: 'form-control', placeholder: 'Message' %>
+        </div>
+      </div>
+      
+      </br></br></br></br>
+      </br></br></br> 
+        
+      <div class='column col-sm-3'>
+        <div class="form-group">
+          <%= f.button :submit, 'Send message', :class=> "btn btn-primary" %>
+        </div>
+      </div>
+      </br></br></br></br>
+    <% end %>
   </div>
-
-  </br></br>
-
-  <div class='column col-sm-3'>
-    <div class="form-group">
-        <%= f.email_field :email, :required => true, class: 'form-control', placeholder: 'Email' %>
-    </div>
-  </div>
-
-  </br></br>
-
-  <div class='column col-sm-3'>
-    <div class="form-group">
-        <%= f.text_area :message, :required => true, class: 'col-xs-12', rows: '5', class: 'form-control', placeholder: 'Message' %>
-    </div>
-  </div>
-  
-  </br></br></br></br>
-  </br></br></br> 
-    
-  <div class='column col-sm-3'>
-    <div class="form-group">
-        <%= f.button :submit, 'Send message', :class=> "btn btn-primary" %>
-    </div>
-  </div>
-  </br></br></br></br>
-<% end %>
+</div>

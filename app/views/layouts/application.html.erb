@@ -5,18 +5,24 @@
     <title><%= content_for?(:title) ? yield(:title) : "Notunpalli" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Notunpalli" %>">
   <title>Notunpalli</title>
+  <link href='http://fonts.googleapis.com/css?family=Arimo|Josefin+Slab:400,600,700|Raleway|Inconsolata' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%#= javascript_include_tag 'photos' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <script>
+      $(document).ready(function(){
+        $('.carousel').carousel();
+      });
+    </script>
   <div class='container'>
     <div class="pull-right user-info">
      <% if current_user %>
-       Hi <%= current_user.first_name.capitalize %>! <%= link_to edit_user_registration_path, class: 'btn btn-mini' do %>
-              <i class="glyphicon glyphicon-edit"></i>
-            <% end %>
+       Hi <%= current_user.first_name.capitalize %>! <%#= link_to edit_user_registration_path, class: 'btn btn-mini' do %>
+              <!-- <i class="glyphicon glyphicon-edit"></i> -->
+            <%# end %>
             <%= link_to destroy_user_session_path, method: :delete, class: 'btn btn-mini' do %>
               <i class="glyphicon glyphicon-log-out"></i>
             <% end %>
@@ -31,21 +37,15 @@
     <div class='page-header'>
       <div class='media'>
         <a class="pull-left" href="/">
-          <img class="resize" src="http://icons.iconarchive.com/icons/icons-land/vista-style-emoticons/256/Study-icon.png" />
+          <%= image_tag "logo.png", class: 'resize' %><!--<img class="resize" src="" />-->
         </a>
         <div class="media-body">
-          <h1 class="media-heading">Notunpalli Sarbojonin Durgotsab Pujo</h1>
+          <p id='change-font' class="media-heading">NOTUNPALLI DURGOTSAV</p>
         </div>
       </div>
     </div>
 
     <%= render "partials/navbar" %>
-
-    <script>
-      $(document).ready(function(){
-        $('.carousel').carousel();
-      });
-    </script>
 
 <%= yield %>
   </div>

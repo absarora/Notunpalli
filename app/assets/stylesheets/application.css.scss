@@ -5,13 +5,44 @@
 @import "bootstrap-sprockets";
 @import 'bootstrap';
 @import 'welcomes.css.scss';
+@import 'contents.css.scss';
 
-.user-info {
+html body{
+  background-image: image-url('background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+}
+a {
+  color: #cc0303;
+}
+a:hover{
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav > li > a:hover, .nav >li > a:focus{
+  color: #FF7902;
+  background-color: #fff;
+  text-shadow: 0.5px 0.5px #000;
+}
+.user-info{
   margin-top: 9px;
+  font-family: 'Josefin Slab', serif;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+#change-font{
+  font-size: 46px;
+  font-family: 'Arimo', sans-serif;
+  color: #fff;
+  text-shadow: 2.5px 2px #FF7902;
 }
 
 .alert{
-  margin-top: 2.5%;
+  margin-top: 2.8%;
+  margin-bottom: 1%;
 }
 
 .form-group{
@@ -79,4 +110,31 @@
 .next {
     float: right;
     text-align: right;
+}
+
+div.contents{
+  margin: 0 7.2% 3% 4.6%;
+
+  background: #7f7f7f;
+  background: rgba(255,255,255,0.3);
+  border-radius: 5px;
+  padding: 10px;
+  min-height: 400px;
+  max-height: 500px;
+  h1{
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+}
+.form-group > a{
+  font-family: 'Josefin Slab', serif;
+  font-size: 18px;
+}
+.btn-primary{
+  background-color: #cc0303;
+  border-color: #ba0404;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active{
+  border-color: #ba0404;
+  background-color: #c00404;
 }

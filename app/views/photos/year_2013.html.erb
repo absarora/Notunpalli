@@ -1,7 +1,8 @@
-<h1>2013</h1>
 <div class='container'>
-  <div class='align-width'>
-    <ul class="row" id="photos-list">
+  <div class='contents'>
+    <h1>2013</h1>
+    <div class='align-width'>
+      <ul class="row" id="photos-list">
     
       <% Photo.all.each do |photo| %>
         <% if photo.title == '2013' %> 
@@ -20,6 +21,7 @@
         
         <% end %>
       <% end %>
-    </ul>
+      </ul>
+    <div>
   </div>
 </div>

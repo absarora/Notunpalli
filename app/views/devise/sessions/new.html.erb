@@ -1,33 +1,37 @@
-<h2>Sign in</h2>
+<div class='container'>
+  <div class='contents'>
+    <h1>Sign In</h1>
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'form-horizontal'}) do |f| %>
-  <%= devise_error_messages! %>
-  
-  <div class='column col-sm-3'>
-    <div class="form-group">
-      <%= f.email_field :email, class: 'form-control', placeholder: 'Email' %>
-    </div>
-  </div>
-  </br></br>
+    <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'form-horizontal'}) do |f| %>
+      <%= devise_error_messages! %>
+      
+      <div class='column col-sm-3'>
+        <div class="form-group">
+          <%= f.email_field :email, class: 'form-control', placeholder: 'Email' %>
+        </div>
+      </div>
+      </br></br>
 
-  <div class='column col-sm-3'>
-    <div class="form-group">
-      <%= f.password_field :password, class: 'form-control', placeholder: 'Password' %>
-    </div>
-  </div>
-  </br></br>
+      <div class='column col-sm-3'>
+        <div class="form-group">
+          <%= f.password_field :password, class: 'form-control', placeholder: 'Password' %>
+        </div>
+      </div>
+      </br></br>
 
-  <div class='column col-sm-3'>
-    <div class="form-group">
-      <%= f.submit "Sign in", class: 'btn btn-primary btn-default' %>
-    </div>
-  </div>
-  </br></br>
+      <div class='column col-sm-3'>
+        <div class="form-group">
+          <%= f.submit "Sign in", class: 'btn btn-primary btn-default' %>
+        </div>
+      </div>
+      </br></br>
 
-  <div class='column col-sm-3'>
-    <div class="form-group">
-        <%= render "devise/shared/links" %>
-    </div>
+      <div class='column col-sm-3'>
+        <div class="form-group">
+            <%= render "devise/shared/links" %>
+        </div>
+      </div>
+      </br></br>
+    <% end %>
   </div>
-  </br></br>
-<% end %>
+</div>

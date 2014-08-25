@@ -1,13 +1,7 @@
-<%# javascript 'bootstrap' %>
-<%# javascript 'colorbox-rails' %>
-<script>
-  $(function(){
-
-  });
-</script>
-<h1>2014</h1>
 <div class='container'>
-  <div class='align-width'>
+  <div class='contents'>
+    <h1>2014</h1>
+    <div class='align-width'>
     <ul class="row" id="photos-list">
     
       <% Photo.all.each do |photo| %>
@@ -27,6 +21,7 @@
         
         <% end %>
       <% end %>
-    </ul>
+      </ul>
+    <div>
   </div>
 </div>
