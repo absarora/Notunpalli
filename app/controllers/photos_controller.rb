@@ -1,5 +1,5 @@
 class PhotosController < ApplicationController
-  respond_to :html, :js
+  # respond_to :html, :js
   def new
     @photos = Photo.order('created_at DESC')
     @photo = Photo.new

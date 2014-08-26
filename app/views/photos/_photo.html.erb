@@ -1,15 +1,13 @@
-<% Photo.all.each do |photo| %>
-  <% if current_user %>
+<% if current_user %>
     <li class="col-xs-2">
-        <%= link_to photo, method: :delete, remote: true, id: "photo-#{photo.id}", data: {confirm: 'Are you sure?'} do %>
-          <%= image_tag(photo.image.thumb('90x80#').url, class: 'img-responsive', class: 'img-thumbnail') %>
-          <i class="glyphicon glyphicon-remove"> </i>
+      <%= link_to photo, method: :delete, remote: true, id: "photo-#{photo.id}", data: {confirm: 'Are you sure?'} do %>
+        <%= image_tag(photo.image.thumb('90x80#').url, class: 'img-responsive', class: 'img-thumbnail') %>
+        <i class="glyphicon glyphicon-remove"> </i>
+      <% end %> 
     </li>
-        <% end %> 
-  <% else %>
-    <li class="col-xs-2">
-      <%= link_to image_tag(photo.image.thumb('90x80#').url, class: 'img-thumbnail'),
-      photo.image.remote_url, rel: 'gallery', :data => { :colorbox_static => true}, target: '_blank' %>
-    </li>
-  <% end %>
+<% else %>
+  <li class="col-xs-2">
+    <%= link_to image_tag(photo.image.thumb('90x80#').url, class: 'img-thumbnail'),
+    photo.image.remote_url, rel: 'gallery', :data => { :colorbox_static => true}, target: '_blank' %>
+  </li>
 <% end %>
