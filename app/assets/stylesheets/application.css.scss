@@ -73,6 +73,8 @@ a:hover{
   padding: 0;
   margin: 0;
   margin-top: 30px;
+  font-family: 'Josefin Slab', serif;
+  font-size: 16px;
   clear: both;
   li {
     list-style-type: none;
@@ -113,7 +115,7 @@ a:hover{
 }
 
 div.contents{
-  margin: 0 7.2% 3% 4.6%;
+  margin: 0 7.2% 0 4.6%;
 
   background: #7f7f7f;
   background: rgba(255,255,255,0.3);
@@ -137,4 +139,17 @@ div.contents{
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active{
   border-color: #ba0404;
   background-color: #c00404;
+}
+footer{
+  p{
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 0;
+    font-family: 'Josefin Slab', serif;
+    font-weight: 600;
+  }
+  p#margin-align{
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
 }
