@@ -1,31 +1,58 @@
 <div class='container'>
   <div class='contents'>
     <h1>GALLERY</h1>
-    <ul class="row" id='gallery'>
+    <!-- <div class='align-width'> -->
+      <ul class="row" id="photos-list">
+        <%= render 'photo' %>
+      </ul>
+    
+      <%# Photo.all.each do |photo| %>
+        <%# if photo.title == '2013' %> 
+          
+          <%# if current_user %>
+            <!-- <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4"><%#= link_to photo, method: :delete, remote: true, id: "photo-#{photo.id}", data: {confirm: 'Are you sure?'} do %> -->
+            <%#= image_tag photo.image.url, class: 'img-responsive', class: 'img-thumbnail' %>
+              <!-- <i class="glyphicon glyphicon-remove"> </i></li> -->
+            <%# end %> 
+          
+          <%# else %>
+            
+            <!-- <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4"><%#= link_to image_tag(photo.image.url, class: 'img-thumbnail'), photo.image.remote_url, rel: 'gallery', :data => { :colorbox_static => true}, target: '_blank' %></li> -->
+            
+          <%# end %>
+        
+        <%# end %>
+      <%# end %>
+      <!-- </ul> -->
+  <div>
+
+    <!-- --------- ADDING ALBUMS ---------- -->
+    
+    <!-- <ul class="row" id='gallery'>
       <%#= render @photos %>
       <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
-        <%= link_to photos_year_2013_path, data: { no_turbolink: true } do %>
-          <%= image_tag("durgotsav-thumb.jpg", size: '180x180', class: 'img-thumbnail') %>
+        <%#= link_to photos_year_2013_path, data: { no_turbolink: true } do %>
+          <%#= image_tag("durgotsav-thumb.jpg", size: '180x180', class: 'img-thumbnail') %>
           <p>2013</p>
-        <% end %>
+        <%# end %>
       </li>
       <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
-        <%= link_to photos_year_2014_path, data: { no_turbolink: true } do %>
-          <%= image_tag("durgotsav-thumb.jpg", size: '180x180', class: 'img-thumbnail') %>
+        <%#= link_to photos_year_2014_path, data: { no_turbolink: true } do %>
+          <%#= image_tag("durgotsav-thumb.jpg", size: '180x180', class: 'img-thumbnail') %>
           <p>2014</p>
-        <% end %>
+        <%# end %>
       </li>
-    </ul>
+    </ul> -->
     <% if current_user %>
       <h3>Upload photos</h3>
       
       <%= form_for @photo, :html => {:class => 'form-horizontal' } do |f| %>
-        <div class='column col-sm-3'>
+        <!-- <div class='column col-sm-3'>
           <div class="form-group"> 
-            <%= f.text_field :title, :required => true, autofocus: true, class: 'form-control', placeholder: 'Album name' %> 
+            <%#= f.text_field :title, :required => true, autofocus: true, class: 'form-control', placeholder: 'Album name' %> 
           </div>
         </div>
-        </br></br></br>
+        </br></br></br> -->
 
         <div class='column col-sm-3'>
           <div class="form-group">
@@ -34,14 +61,14 @@
         </div>
         </br></br></br></br>
 
-        <!-- <div class="progress-wrapper">
+        <div class="progress-wrapper">
           <p>Bitrate: <span class="bitrate"></span></p>
           <div class="progress">
             <div class="progress-bar" role="progressbar">
               0%
             </div>
           </div>
-        </div> -->
+        </div>
       <% end %>
     <% end %>
   </div>
@@ -51,9 +78,9 @@
 $(document).ready(function() {
   var bitrate, multiple_photos_form, progress_bar, wrapper;
   multiple_photos_form = $("#new_photo");
-  // wrapper = multiple_photos_form.find(".progress-wrapper");
-  // bitrate = wrapper.find(".bitrate");
-  // progress_bar = wrapper.find(".progress-bar");
+  wrapper = multiple_photos_form.find(".progress-wrapper");
+  bitrate = wrapper.find(".bitrate");
+  progress_bar = wrapper.find(".progress-bar");
   multiple_photos_form.fileupload({
     dataType: "script",
     add: function(e, data) {
@@ -67,18 +94,18 @@ $(document).ready(function() {
       }
     }
   });
-  // multiple_photos_form.on("fileuploadstart", function() {
-  //   return wrapper.show();
-  // });
-  // multiple_photos_form.on("fileuploaddone", function() {
-  //   wrapper.hide();
-  //   return progress_bar.width(0);
-  // });
-  // return multiple_photos_form.on("fileuploadprogressall", function(e, data) {
-  //   var progress;
-  //   bitrate.text((data.bitrate / 1024).toFixed(2) + "Kb/s");
-  //   progress = parseInt(data.loaded / data.total * 100, 10);
-  //   return progress_bar.css("width", progress + "%").text(progress + "%");
-  // });
+  multiple_photos_form.on("fileuploadstart", function() {
+    return wrapper.show();
+  });
+  multiple_photos_form.on("fileuploaddone", function() {
+    wrapper.hide();
+    return progress_bar.width(0);
+  });
+  return multiple_photos_form.on("fileuploadprogressall", function(e, data) {
+    var progress;
+    bitrate.text((data.bitrate / 1024).toFixed(2) + "Kb/s");
+    progress = parseInt(data.loaded / data.total * 100, 10);
+    return progress_bar.css("width", progress + "%").text(progress + "%");
+  });
 });
 </script>

@@ -1,9 +1,10 @@
+<% 
+=begin %>
 <h1>Albums</h1>
  
 <ul class="row" id="photos-list">
   <%#= render @photos %>
 </ul>
- 
 <%= form_for @photo, remote: true, :html => {:class => 'form-horizontal'} do |f| %>
   
   <div class='column col-sm-3'>
@@ -29,3 +30,5 @@
   </div>
   </br></br></br>
 <% end %>
+<% 
+=end %>

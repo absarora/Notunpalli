@@ -1,6 +1,6 @@
 <ul class='nav nav-pills'>
   <li><%= link_to 'HOME', root_path %></li>
-  <li><%= link_to 'GALLERY', contents_gallery_path %></li>
+  <li><%= link_to 'GALLERY', contents_gallery_path, data: { no_turbolink: true } %></li>
   <li><%= link_to 'EVENTS', contents_event_path %></li>
   <li><%= link_to 'COMMITTEE', contents_committee_path %></li>
   <li><%= link_to 'DONATE', contents_donate_path%></li>

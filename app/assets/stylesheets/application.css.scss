@@ -47,26 +47,20 @@ a:hover{
 
 .form-group{
   margin-bottom: 0;
+  font-family: 'Josefin Slab', serif;
 }
 
 .hidden { display: none; }
 
 #photos-list {
   padding: 0;
-  margin: 0;
-  margin-top: 30px;
+  margin: 20px 0 0 10px;
   clear: both;
   li {
     list-style-type: none;
     padding: 0;
-    margin-right: 2.5%;
-    margin-bottom: 10px;
-    
-    img {
-      margin-bottom: 10px;
-      width: 6.25em;
-      height: 6.25em;
-    }
+    margin-right: 2.0%;
+    margin-bottom: 2.0%;
   }
 }
 #gallery{
@@ -122,7 +116,7 @@ div.contents{
   border-radius: 5px;
   padding: 10px;
   min-height: 400px;
-  max-height: 500px;
+  max-height: 1000px;
   h1{
     margin-top: 0;
     margin-bottom: 15px;

@@ -23,14 +23,16 @@ div.col-md-5 {
     margin-bottom: 20px;
   }
   p#event{
-    font-family: Helvetica Neue, Helvetica, Arial;
+    font-family: 'Josefin Slab', serif;
+    font-weight: 700;
     font-size: 18px;
     margin-bottom: 0;
   }
-  p{
-    font-family: Helvetica Neue, Helvetica, Arial;
-    font-size: 12px;
+  p, td{
+    font-family: 'Josefin Slab', Helvetica Neue, Helvetica, Arial;
+    font-size: 14px;
   }
+
   td.dtime{
     text-align: right;
   }
@@ -40,18 +42,7 @@ div.col-md-5 {
     margin-bottom: 5px;
   }
 }
-div.col-sm-6 {
-  p#italic {
-    font-style: italic;
-    font-size: 14px;
-    margin-bottom: 0;
-    padding: 3px 8px 0 0;
-    text-align: right;
-  }
-  .height-adj{
-    padding-right: 0;
-  }
-}
+
 div.col-md-7 {
   width: 57.0%;
   background: #FFFFFF;
@@ -64,13 +55,14 @@ div.col-md-7 {
     margin-bottom: 20px;
   }
   p#event{
-    font-family: Helvetica Neue, Helvetica, Arial;
+    font-family: 'Josefin Slab', serif;
+    font-weight: 700;
     font-size: 18px;
     margin-bottom: 0;
   }
-  p{
-    font-family: Helvetica Neue, Helvetica, Arial;
-    font-size: 12px;
+  p, td{
+    font-family: 'Josefin Slab', Helvetica Neue, Helvetica, Arial;
+    font-size: 14px;
   }
   p.table-footer{
     font-size: 14px;
@@ -102,6 +94,18 @@ div.col-md-7 {
   h4{
     font-family: 'Josefin Slab', serif;
     font-weight: 700;
+  }
+  #height-adj{
+    padding: 0;
+  }
+  div.col-sm-6 {
+    p#italic {
+      font-style: italic;
+      font-size: 14px;
+      margin-bottom: 0;
+      padding: 3px 8px 0 0;
+      text-align: right;
+    }
   }
 }
 
@@ -142,4 +146,8 @@ div.committee-page{
   font-family: 'Josefin Slab', serif;
   font-size: 16px;
   font-weight: 600;
+}
+.col-xs-2{
+  text-align: center;
+  width: 12%;
 }
