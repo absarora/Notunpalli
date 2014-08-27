@@ -27,8 +27,8 @@
             <%= link_to destroy_user_session_path, method: :delete, class: 'btn btn-mini' do %>
               <i class="glyphicon glyphicon-log-out"></i>
             <% end %>
-     <% else %>
-       <%= link_to "Sign In", new_user_session_path %> <!-- or 
+     <%# else %>
+       <%#= link_to "Sign In", new_user_session_path %> <!-- or 
        <%#= link_to "Sign Up", new_user_registration_path %> -->
      <% end %>
     </div>
