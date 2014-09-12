@@ -138,6 +138,8 @@ GEM
       rack
       rake (>= 0.8.1)
     pg (0.17.1)
+    placeholder-gem (3.0.2)
+      railties (>= 3.1)
     polyglot (0.3.5)
     rack (1.5.2)
     rack-cache (1.2)
@@ -228,7 +230,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootstrap-sass
+  bootstrap-sass (~> 3.2.0)
   capybara
   coffee-rails (~> 4.0.0)
   colorbox-rails
@@ -245,6 +247,7 @@ DEPENDENCIES
   newrelic_rpm (~> 3.9.2.239)
   passenger
   pg
+  placeholder-gem
   rack-cache
   rails (= 4.1.4)
   rails_12factor

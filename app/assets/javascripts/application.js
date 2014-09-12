@@ -15,6 +15,7 @@
 //= require jquery_ujs
 //= require jquery.remotipart
 //= require jquery-fileupload/basic
+//= require placeholder
 //= require bootstrap
 //= require bootstrap-sprockets
 //= require colorbox-rails

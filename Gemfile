@@ -6,6 +6,7 @@ gem 'rails', '4.1.4'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
+gem 'bootstrap-sass', '~> 3.2.0'
 gem 'sass-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -31,7 +32,6 @@ gem 'rails_12factor', group: :production
 # gem 'bcrypt', '~> 3.1.7'
 gem 'passenger'
 
-gem 'bootstrap-sass'
 gem 'rspec-rails'
 
 gem 'devise'
@@ -54,6 +54,8 @@ group :test do
 end
 gem 'dragonfly-s3_data_store'
 gem 'newrelic_rpm', '~> 3.9.2.239'
+
+gem 'placeholder-gem'
 
 #gem 'active_merchant_payu_in' #payumoney (for donations)
 # Use unicorn as the app server

@@ -24,7 +24,7 @@ a:hover{
 .nav > li > a:hover, .nav >li > a:focus{
   color: #FF7902;
   background-color: #fff;
-  text-shadow: 0.5px 0.5px #000;
+  font-weight: bold;
 }
 .user-info{
   margin-top: 9px;
@@ -46,6 +46,7 @@ a:hover{
 }
 
 .form-group{
+  text-align: left;
   margin-bottom: 10px;
   font-family: 'Josefin Slab', serif;
 }
@@ -118,7 +119,7 @@ div.contents{
   background: rgba(255,255,255,0.3);
   border-radius: 5px;
   padding: 10px;
-  min-height: 400px;
+  min-height: 600px;
   max-height: 1000px;
   h1{
     margin-top: 0;

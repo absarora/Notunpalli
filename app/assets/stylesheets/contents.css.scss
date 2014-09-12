@@ -69,18 +69,15 @@ div.col-md-7 {
     text-align: center;
   }
   td.realign-image{
+    width: 150px;
     text-align: right;
+  }
+  td.align-date{
+    width: 168px;
   }
   
   td.custom-align{
-    padding-left: 1em;
-    padding-right: 0;
-  }
-  td.custom-align-2{
-    padding-left: 1.750em;
-  }
-  td.custom-align-3{
-    padding-left: 48px;
+    text-align: left;
   }
 }
 .col-md-4{
