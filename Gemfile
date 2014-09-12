@@ -54,6 +54,8 @@ group :test do
 end
 gem 'dragonfly-s3_data_store'
 gem 'newrelic_rpm', '~> 3.9.2.239'
+
+#gem 'active_merchant_payu_in' #payumoney (for donations)
 # Use unicorn as the app server
 # gem 'unicorn'
 
