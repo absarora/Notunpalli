@@ -9,8 +9,23 @@ h1, h3 {
 }
 
 .page-header{
-  margin: 2% 6% 0.9% 6%;
+  margin: 2% 6% 0.9%;
   padding: 0;
+  
+  #logo{
+    margin-bottom: -1%;
+  }
+
+  #logo, #page-title{
+    display: inline-block;
+  }
+  #page-title p{
+    margin: 0;
+    font-size: 3.125em;
+    font-family: 'Arimo', sans-serif;
+    color: #fff;
+    text-shadow: 2.5px 2px #FF7902;
+  }
 }
 
 .nav{
@@ -23,25 +38,16 @@ h1, h3 {
   width: 80px;
   height: 80px;
 }
-.media-heading{
-  margin-top: 2.5%;
-}
 div#index-view{
   margin: 0 6.0% 0% 5.8%;
-  background-attachment: fixed;
   background: #7f7f7f;
   background: rgba(255,255,255,0.3);
   border-radius: 5px;
   padding: 10px;
-  height: 800px;
-}
-
-div.col-md-12{
-  padding: 12px;
-  
-  border-bottom-right-radius: 0.313em;
-  border-bottom-left-radius: 0.313em;
-  font-family: 'Josefin Slab', serif;
-  font-size: 18px;
-  font-weight: 600;
+  height: 100%;
+  #index-content{
+    font-family: 'Josefin Slab', serif;
+    font-size: 1.175em;
+    font-weight: 600;
+  }
 }

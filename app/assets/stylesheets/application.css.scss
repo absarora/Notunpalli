@@ -1,18 +1,18 @@
 /*
 *= require colorbox-rails
 *= require_self
+*= require_tree .
 */
 @import "bootstrap-sprockets";
 @import 'bootstrap';
-@import 'welcomes.css.scss';
-@import 'contents.css.scss';
 
 html body{
   background-image: image-url('background.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 100%;
+  background-size: cover;
 }
+
 a {
   color: #cc0303;
 }
@@ -27,17 +27,10 @@ a:hover{
   font-weight: bold;
 }
 .user-info{
-  margin-top: 9px;
+  margin-top: 1%;
   font-family: 'Josefin Slab', serif;
   font-weight: 600;
   font-size: 18px;
-}
-
-#change-font{
-  font-size: 46px;
-  font-family: 'Arimo', sans-serif;
-  color: #fff;
-  text-shadow: 2.5px 2px #FF7902;
 }
 
 .alert{
@@ -140,16 +133,17 @@ div.contents{
   background-color: #c00404;
 }
 footer{
+  font-size: 0.875em;
   p{
     text-align: center;
-    margin-top: 8px;
+    margin-top: 1%;
     margin-bottom: 0;
     font-family: 'Josefin Slab', serif;
     font-weight: 600;
   }
   p#margin-align{
     margin-top: 0;
-    margin-bottom: 8px;
+    margin-bottom: 1%;
   }
 }
 .map-container{

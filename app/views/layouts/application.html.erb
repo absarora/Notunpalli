@@ -12,12 +12,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <script>
+  <div class='container'>
+    <script>
       $(document).ready(function(){
         $('.carousel').carousel();
       });
     </script>
-  <div class='container'>
     <div class="pull-right user-info">
      <% if current_user %>
        Hi <%= current_user.first_name.capitalize %>! <%#= link_to edit_user_registration_path, class: 'btn btn-mini' do %>
@@ -35,13 +35,13 @@
     <%= render 'partials/flash_messages' %>
     
     <div class='page-header'>
-      <div class='media'>
-        <a class="pull-left" href="/">
-          <%= image_tag "logo.png", class: 'resize' %><!--<img class="resize" src="" />-->
-        </a>
-        <div class="media-body">
-          <p id='change-font' class="media-heading">NOTUNPALLI DURGOTSAB</p>
-        </div>
+      <div id='logo'>
+        <%= link_to root_path do %>
+          <%= image_tag "logo.png", class: 'resize' %>
+        <% end %>
+      </div>
+      <div id="page-title">
+        <p>NOTUNPALLI DURGOTSAB</p>
       </div>
     </div>
 
