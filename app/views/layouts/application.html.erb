@@ -7,6 +7,7 @@
   <title>Notunpalli</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag "application", 'https://fonts.googleapis.com/css?family=Arimo|Josefin+Slab:400,600,700|Raleway|Inconsolata', :media => "all" %>
+  <%= javascript_include_tag "https://maps.google.com/maps/api/js?key=AIzaSyA-jjtAeX1jtRQ8i5rSSP71N2x_kBl8yC4" %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%#= javascript_include_tag 'photos' %>
   <%= csrf_meta_tags %>
@@ -49,9 +50,8 @@
 
 <%= yield %>
   </div>
-  <footer>
-    <p>Copyright 2014 @ Notunpalli Sarbojonin Durgotsab Committee. All Rights Reserved.</p>
-    <p id='margin-align'>Built by AjaySingh and SurabheeSaha</p>
+  <footer id="footer">
+    Copyright <%= Time.now.year %> @ Notunpalli Sarbojonin Durgotsab Committee. All Rights Reserved.
   </footer>
 
 </body>

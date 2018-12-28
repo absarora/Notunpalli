@@ -1,42 +1,39 @@
-<div class='container'>
-  <div class='contents'>
-    <h1>CONTACT</h1>
-    <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
-    <div class='row'>
-      <div class='col-sm-4'>
-        <div class='column col-sm-12'>
-          <div class="form-group">
-            <%= f.text_field :name, :required => true, autofocus: true, class: 'form-control', placeholder: 'Name' %>
-          </div>
-        </div>
-
-        <div class='column col-sm-12'>
-          <div class="form-group">
-            <%= f.email_field :email, :required => true, class: 'form-control', placeholder: 'Email' %>
-          </div>
-        </div>
-
-        <div class='column col-sm-12'>
-          <div class="form-group">
-            <%= f.text_area :message, :required => true, class: 'col-xs-12', rows: '5', class: 'form-control', placeholder: 'Message' %>
-          </div>
-        </div>
-
-        <div class='column col-sm-12'>
-          <div class="form-group">
-            <%= f.button :submit, 'Send message', :class=> "btn btn-primary" %>
-          </div>
+<div class='contents'>
+  <h1>CONTACT</h1>
+  <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
+  <div class='row'>
+    <div class='col-sm-4'>
+      <div class='column col-sm-12'>
+        <div class="form-group">
+          <%= f.text_field :name, :required => true, autofocus: true, class: 'form-control', placeholder: 'Name' %>
         </div>
       </div>
-      <div class='col-sm-8'>
-        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-        <div class='map-container'>
-          <div id="gmap_canvas"></div>
+
+      <div class='column col-sm-12'>
+        <div class="form-group">
+          <%= f.email_field :email, :required => true, class: 'form-control', placeholder: 'Email' %>
         </div>
-        <script type="text/javascript"> function init_map(){var myOptions = {zoom:18,center:new google.maps.LatLng(19.064558353232318,72.83355876715086),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(19.064558353232318, 72.83355876715086)});infowindow = new google.maps.InfoWindow({content:"<b>Notunpalli Durgotsab</b><br/>Municipal Garden<br/>400050 Bandra West" });google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
-        </script>
+      </div>
+
+      <div class='column col-sm-12'>
+        <div class="form-group">
+          <%= f.text_area :message, :required => true, class: 'col-xs-12', rows: '5', class: 'form-control', placeholder: 'Message' %>
+        </div>
+      </div>
+
+      <div class='column col-sm-12'>
+        <div class="form-group">
+          <%= f.button :submit, 'SEND', :class=> "btn btn-primary", id: 'send-msg-btn' %>
+        </div>
       </div>
     </div>
-    <% end %>
+    <div class='col-sm-8'>
+      <div class='map-container'>
+        <div id="gmap_canvas"></div>
+      </div>
+      <script type="text/javascript"> function init_map(){var myOptions = {zoom:18,center:new google.maps.LatLng(19.064558353232318,72.83355876715086),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(19.064558353232318, 72.83355876715086)});infowindow = new google.maps.InfoWindow({content:"<b>Notunpalli Durgotsab</b><br/>Municipal Garden<br/>400050 Bandra West" });google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
+      </script>
+    </div>
   </div>
+  <% end %>
 </div>

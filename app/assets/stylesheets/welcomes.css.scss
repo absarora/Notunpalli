@@ -9,7 +9,7 @@ h1, h3 {
 }
 
 .page-header{
-  margin: 2% 6% 0.9%;
+  margin: 1.5rem 0 0;
   padding: 0;
   
   #logo{
@@ -29,25 +29,24 @@ h1, h3 {
 }
 
 .nav{
-  margin: 0 6% 0.9% 6%;
+  margin: 1rem 0;
   font-family: 'Josefin Slab', serif;
   font-weight: 600;
+  li > a {
+    line-height: 1;
+  }
 }
 .resize{
   display: block;
   width: 80px;
   height: 80px;
 }
-div#index-view{
-  margin: 0 6.0% 0% 5.8%;
-  background: #7f7f7f;
-  background: rgba(255,255,255,0.3);
-  border-radius: 5px;
-  padding: 10px;
-  height: 100%;
-  #index-content{
-    font-family: 'Josefin Slab', serif;
-    font-size: 1.175em;
-    font-weight: 600;
-  }
+p#index-content{
+  font-family: 'Josefin Slab', serif;
+  font-size: 1.15em;
+  font-weight: 600;
+  line-height: 2;
+  background-color: #ffb90047;
+  padding: 1rem;
+  margin: 1rem 0 0;
 }

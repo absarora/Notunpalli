@@ -1,8 +1,5 @@
 .event-page{
-  margin: 0 7.2% 0 4.6%;
-
-  background: #7f7f7f;
-  background: rgba(255,255,255,0.3);
+  background-color: #fff;
   border-radius: 5px;
   padding: 10px;
   h1{
@@ -12,12 +9,6 @@
 }
 
 div.col-md-5 {
-  width: 40%;
-  background: #FFFFFF;
-  background: rgba(233,233,233,0.1);
-  padding: 0 0px 0 8px;
-  border-radius: 5px;
-  margin-left: 10px;
   h3{
     text-align: center;
     margin-bottom: 20px;
@@ -44,12 +35,6 @@ div.col-md-5 {
 }
 
 div.col-md-7 {
-  width: 57.0%;
-  background: #FFFFFF;
-  background: rgba(233,233,233,0.1);
-  padding: 0 0px 0 10px;
-  border-radius: 5px;
-  margin-left: 10px;
   h3{
     text-align: center;
     margin-bottom: 20px;
@@ -111,9 +96,7 @@ div.col-sm-6 {
     }
   }
 div.committee-page{
-  margin: 0 7.2% 0 4.6%;
-  background: #7f7f7f;
-  background: rgba(255,255,255,0.3);
+  background-color: #fff;
   border-radius: 5px;
   padding: 10px;
 
@@ -135,15 +118,11 @@ div.committee-page{
   .col-md-12{
     text-align: center;
   }
+  #managing-committee-members-wrapper {
+    margin-bottom: 2rem;
+  }
 }
 .col-lg-12{
-  width: 98%;
-  margin-left: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  padding: 0 12px;
-  background: #FFFFFF;
-  background: rgba(233,233,233,0.1);
   font-family: 'Josefin Slab', serif;
   font-size: 16px;
   font-weight: 600;

@@ -1,27 +1,25 @@
-<div class='container'>
-  <div class='event-page'>
+<div class='event-page'>
+  
+  <h1>EVENTS</h1>
+  
+  <div class="row">
+    <div class="col-md-5" class='event-align'>
+      <h3>Puja (2014)</h3>
+      <%= render 'partials/event_agenda' %>
+      <p class='table-footer'>
+        Timing subject to change as per the priest's advice.
+      </p>
+      <p class='table-footer'>
+        Bhog: October 1, 2014 - October 3, 2014 | 1:30 pm
+      </p>
+    </div>
     
-    <h1>EVENTS</h1>
-    
-    <div class="row">
-      <div class="col-md-5" class='event-align'>
-        <h3>Puja (2014)</h3>
-        <%= render 'partials/event_agenda' %>
-        <p class='table-footer'>
-          Timing subject to change as per the priest's advice.
-        </p>
-        <p class='table-footer'>
-          Bhog: October 1, 2014 - October 3, 2014 | 1:30 pm
-        </p>
-      </div>
-      
-      <div class="col-md-7" class='event-align'>
-        <h3>Cultural Programme</h3>
-        <p class='table-footer'>
-          September 29, 2014 - October 3, 2014 | 8:00pm <em>onwards</em>
-        </p>
-        <%= render 'partials/event_cultural' %>
-      </div>
+    <div class="col-md-7" class='event-align'>
+      <h3>Cultural Programme</h3>
+      <p class='table-footer'>
+        September 29, 2014 - October 3, 2014 | 8:00pm <em>onwards</em>
+      </p>
+      <%= render 'partials/event_cultural' %>
     </div>
   </div>
 </div>
